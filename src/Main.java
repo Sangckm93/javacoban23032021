@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String [] args) throws Exception{
-//        System.out.print("Hello World");
+        System.out.println("Hello World");
         /*
          1: Tao thu muc .git
              git init
@@ -54,23 +54,60 @@ public class Main {
             toán tử ba ngôi:
 
             biểu thức ? giá trị:gia tri;
+
+            int a = 10;
+            int b = 10;
+            int ketqua = 0;
+
+            if (a>b) ketqua = 1;
+                else if (a==b) ketqua = 0;
+                else ketqua = -1;
             vd: ketqua = (a>b)?1:0;
+                ketqua = a>b ? 1 : a<b ? -1 : 0;
+
+            if (a>b){
+                return; // dừng chương trình tại phương thức này
+             }
+            System.out.println("Tiếp tục");
+
+           6. cấu trúc switch/ case.
+
+            int thang = 5;
+            switch(thang)
+            {
+                case 1: System.out.print(" Quý 1");
+                    break;
+                case 2: System.out.print(" Quý 1");
+                    break;
+                case 3: System.out.print(" Quý 1");
+                    break;
+                default: System.out.print(" Không thuộc quý nào");
+            }
+            System.out.print(" Thoát khỏi switch");
         */
-        int a = 15;
-        int b = 10;
-        int ketqua = 0;
+
+        // array : mảng
+        // Cách 1: Mảng chưa có dữ liệu
+        int[] arrNums = new int[10];
+        arrNums[0] = 1;
+        System.out.println(arrNums[0]);
+        System.out.println(arrNums.length);
+
+        // Cách 2: Mảng có dữ liệu
+        int[] arrNums1 = {1,2,3,4,5,6,7};
+        System.out.println("arrNums1 :"+ arrNums[0]);
+        System.out.println("arrNums1 leng"+ arrNums.length);
 
 
-        if (a>b) ketqua = 1;
-        else if (a==b) ketqua = 0;
-        else ketqua = -1;
-        System.out.println(ketqua);
-
-//        if (a>b){
-//            System.out.println("A lớn hơn B");
-//        }else{
-//            System.out.println("A bé hơn hoặc bằng B");
-//        }
+        int[] arrNums2 = {1,2,3,4,5,6,7,8,9,10};
+        for (int i = 0; i < arrNums2.length; i++) {
+            if (arrNums2[i]%2 == 0) {
+                if ((arrNums2[i]>5) && (arrNums2[i]<=8)) {
+                    continue;
+                }
+                System.out.println("arrNums2 :" + arrNums2[i]);
+            }
+        }
 
     }
 }
